@@ -1,0 +1,52 @@
+.itemWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(12, 12, 12);
+}
+
+.itemWrapper h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.itemWrapper p {
+    margin: 0 15px;
+}
+
+/* Background Colors Based on Priority */
+.priority {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 5px;
+
+}
+
+/* Colors for priority text */
+.low {
+    color: green;
+}
+
+.medium {
+    color: gray;
+}
+
+.high {
+    color: red;
+}
+.infoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Space between icon and text */
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
