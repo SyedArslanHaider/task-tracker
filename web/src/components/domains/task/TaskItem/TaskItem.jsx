@@ -7,7 +7,7 @@ Add the necessary props to the component.
 */
 export function TaskItem(props) {
   return (
-      <div className={styles.itemWrapper}>
+    <div className={styles.itemWrapper}>
       <h3>{props.title}</h3>
 
       {/* Priority with dynamic color */}
@@ -17,14 +17,22 @@ export function TaskItem(props) {
 
       {/* Date with icon */}
       <div className={styles.infoWrapper}>
-        <img src="/calendar-icon.png" alt="Calendar" className={styles.icon} />
+        <img
+          src="https://img.icons8.com/plumpy/24/birthday-date.png"
+          alt="Calendar"
+          className={styles.icon}
+        />
         <p>{props.dueDate}</p>
       </div>
 
       {/* Members with icon */}
       <div className={styles.infoWrapper}>
-        <img src="/user-icon.png" alt="User" className={styles.icon} />
-        <p>{props.members.join()}</p>
+        <img
+          src="https://img.icons8.com/color/48/person-male.png"
+          alt="User"
+          className={styles.icon}
+        />
+        <p>{props.members}</p>
       </div>
 
       <p>{props.description}</p>
@@ -32,10 +40,10 @@ export function TaskItem(props) {
   );
 }
 TaskItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   title: PropTypes.string.isRequired,
   priority: PropTypes.string.isRequired,
   dueDate: PropTypes.string.isRequired,
   members: PropTypes.arrayOf(PropTypes.string).isRequired,
   description: PropTypes.string.isRequired,
-}
+};
