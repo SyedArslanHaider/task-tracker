@@ -1,44 +1,68 @@
+/* General Styling for the Task Item */
 .itemWrapper {
+    position: relative;
+    width: 1100px;
+    /* Adjusted width */
+    height: 62px;
+    /* Adjusted height */
+    background: #E0E4EA;
+    /* Background color */
+    border: 1px solid #000000;
+    /* Border color */
+    border-radius: 17px;
+    /* Border radius to match the design */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(12, 12, 12);
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width/height */
 }
 
+/* Styling for the Title */
 .itemWrapper h3 {
     margin: 0;
     font-size: 18px;
+    font-weight: 600;
+    /* Adjusted weight for consistency */
+    color: #000;
+    /* Default color for the title */
 }
 
+/* Styling for the Paragraphs */
 .itemWrapper p {
     margin: 0 15px;
+    font-size: 14px;
+    /* Adjusted font size */
+    color: #333;
+    /* Slightly lighter color */
 }
 
-/* Background Colors Based on Priority */
+/* Priority Styling */
 .priority {
     font-weight: bold;
     padding: 3px 8px;
     border-radius: 5px;
-
 }
 
-/* Colors for priority text */
+/* Priority Colors */
 .low {
+    background-color: lightgreen;
     color: green;
 }
 
 .medium {
-    color: orange;
+    background-color: rgb(233, 184, 94);
+    color: rgb(255, 165, 0);
 }
 
 .high {
+    background-color: lightcoral;
     color: red;
 }
+
+/* Information Wrapper for Icons and Text */
 .infoWrapper {
     display: flex;
     align-items: center;
@@ -46,7 +70,21 @@
     /* Space between icon and text */
 }
 
+/* Icon Styling */
 .icon {
     width: 16px;
     height: 16px;
+}
+
+/* Styling for the Members Section */
+.membersWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Adjusted spacing for icons and text in members */
+.membersWrapper p {
+    margin: 0;
+    font-size: 14px;
 }
