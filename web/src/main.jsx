@@ -7,15 +7,33 @@ import './index.css';
 import { TaskManager } from './pages/TaskManager.jsx';
 import { AddToTask } from './pages/AddToTask.jsx';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/task-manager" element={<TaskManager />} />
-          <Route path="/add-task" element={<AddToTask />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-);
+import { DataFetchingDemoPage } from './pages/DataFetchingDemoPage.jsx';
+
+async function enableMocking() {
+  if (import.meta.env === 'development') {
+    return;
+  }
+
+  const { worker } = await import('./mocks/browser');
+
+  // `worker.start()` returns a Promise that resolves
+  // once the Service Worker is up and ready to intercept requests.
+  return worker.start({
+    onUnhandledRequest: 'bypass', // Allows non-mocked requests to pass through
+  });
+}
+
+enableMocking().then(() => {
+  createRoot(document.getElementById('root')).render(
+    <StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="/task-manager" element={<TaskManager />} />
+            <Route path="/add-task" element={<AddToTask />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </StrictMode>,
+  )
+});
