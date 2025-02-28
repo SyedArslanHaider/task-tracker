@@ -4,8 +4,11 @@ import { v4 as uuidv4 } from 'uuid';
 const allTasks = new Map();
 
 allTasks.set(uuidv4(), {
-  name: 'Task 1',
-  status: 'OPEN',
+  title: 'Re-work UI/UX',
+  priority: 'low',
+  dueDate: '12/04/2021',
+  members: ['Said', 'Rechal'],
+  description: 'Timmer App',
 });
 
 export const handlers = [

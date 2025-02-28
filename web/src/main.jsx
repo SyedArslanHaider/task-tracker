@@ -22,7 +22,6 @@ async function enableMocking() {
     onUnhandledRequest: 'bypass', // Allows non-mocked requests to pass through
   });
 }
-
 enableMocking().then(() => {
   createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -35,5 +34,5 @@ enableMocking().then(() => {
         </Routes>
       </BrowserRouter>
     </StrictMode>,
-  )
+  );
 });
