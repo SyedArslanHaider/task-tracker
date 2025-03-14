@@ -1,0 +1,80 @@
+/* Main Container for Layout */
+.container {
+    display: flex;
+    height: 100vh;
+    /* Full height of the viewport */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 300px;
+    /* Set sidebar width */
+    background-color: #f4f4f4;
+    /* Background color for the sidebar */
+    display: flex;
+    flex-direction: column;
+    /* Stack the logo and links vertically */
+    align-items: center;
+    /* Center the items horizontally */
+    padding: 20px;
+    gap: 20px;
+    /* Space between the items */
+}
+
+/* Logo Styles */
+.logo {
+    margin-top: 30px;
+    width: 146px;
+    /* Set width of the logo */
+    height: 63px;
+    /* Set height of the logo */
+}
+
+/* Nav links container */
+.nav-links {
+    margin-top: 40px;
+    list-style: none;
+    /* Remove default list styling */
+    padding: 0;
+    /* Remove padding */
+    display: flex;
+    /* Use flexbox to align items */
+    flex-direction: column;
+    /* Stack links vertically */
+    gap: 25px;
+    /* Add space between the links */
+    align-items: center;
+    /* Center links horizontally */
+}
+
+/* Link styles */
+.nav-links a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: black;
+    /* Set text color */
+    font-weight: bold;
+    /* Make text bold */
+    font-size: 18px;
+    /* Set font size */
+    padding: 5px 10px;
+    /* Add padding to links */
+    transition: background-color 0.3s ease;
+    /* Add smooth transition effect */
+}
+
+/* Link hover effect */
+.nav-links a:hover {
+    background-color: #ddd;
+    /* Light background color on hover */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Content Area */
+.content {
+    flex-grow: 1;
+    /* Make content area take up remaining space */
+    padding: 20px;
+    /* Add padding to content */
+}

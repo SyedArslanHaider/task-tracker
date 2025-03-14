@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './NewFormTask.css';
+import './AddToTask.css';
 // eslint-disable-next-line react/prop-types
-export function NewTaskForm({ handelButton }) {
+export function AddToTask({ handelButton }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
